@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>페이지를 찾을 수 없습니다 - 플로럴데이즈 (Floraldays)</title>
+
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- 📌 파비콘 및 모바일 아이콘 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+
+  <style>
+    body {
+      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif !important;
+      background-color: #FAF9F6;
+      color: #2C3E35;
+      margin: 0;
+      padding: 0;
+    }
+
+    .error-container { 
+      max-width: 680px; 
+      margin: 80px auto; 
+      padding: 60px 40px; 
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(45, 90, 39, 0.04);
+      border: 1px solid #DDE3DE;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #2D5A27;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .error-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2D5A27;
+      margin-bottom: 16px;
+    }
+
+    .error-desc {
+      font-size: 1.05rem;
+      color: #6C7A72;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .error-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .error-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #2D5A27;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background-color 0.15s ease;
+    }
+
+    .error-btn:hover {
+      background: #1E3D1A;
+    }
+
+    .error-btn-secondary {
+      background: #ffffff;
+      color: #2D5A27;
+      border: 1px solid #DDE3DE;
+    }
+
+    .error-btn-secondary:hover {
+      background: #F0F4EF;
+      color: #2D5A27;
+      border-color: #2D5A27;
+    }
+
+    @media (max-width: 768px) {
+      .error-container { padding: 40px 20px; margin: 30px 15px; }
+      .error-code { font-size: 3rem; }
+      .error-title { font-size: 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand-logo">
+        <img src="/images/logo.png" alt="플로럴데이즈 Floraldays" class="logo-image">
+      </a>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="/">전체보기</a></li>
+          <li><a href="/study.html">나무의사·자격증</a></li>
+          <li><a href="/sop.html">수목진료 SOP</a></li>
+          <li><a href="/trend.html">식물 트렌드</a></li>
+          <li><a href="/homecare.html">홈가드닝 클리닉</a></li>
+          <li><a href="/ecostory.html">도시숲·생태</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-title">요청하신 페이지를 찾을 수 없습니다</h1>
+      <p class="error-desc">
+        방문하시려는 페이지의 주소가 잘못 입력되었거나,<br>
+        삭제 또는 이동되어 더 이상 제공되지 않습니다.
+      </p>
+      <div class="error-btn-group">
+        <a href="/" class="error-btn">메인 홈으로 이동</a>
+        <a href="/trend.html" class="error-btn error-btn-secondary">최신 식물 트렌드 보기</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-info">
+        <strong>플로럴데이즈 (Floraldays)</strong>
+        <p>식물·수목 전문 지식 아카이브 및 최신 가드닝·생태 트렌드 매거진입니다.</p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Floraldays. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>
