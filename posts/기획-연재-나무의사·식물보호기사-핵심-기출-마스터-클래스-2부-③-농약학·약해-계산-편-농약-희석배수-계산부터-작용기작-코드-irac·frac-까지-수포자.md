@@ -12,7 +12,7 @@ title: '[기획 연재] 나무의사·식물보호기사 핵심 기출 마스터
 slug: study-pesticide-part3
 category: 나무의사·국가자격증 스터디
 is_pillar: false
-date: 2026-11-18
+date: 2026-12-13
 thumbnail: /images/uploads/study-pesticide-part3.jpg
 ---
 
