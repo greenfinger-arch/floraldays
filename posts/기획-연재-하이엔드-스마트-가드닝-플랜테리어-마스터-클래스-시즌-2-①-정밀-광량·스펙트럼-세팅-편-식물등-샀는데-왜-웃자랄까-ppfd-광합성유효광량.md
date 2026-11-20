@@ -12,7 +12,7 @@ title: '[기획 연재] 하이엔드 스마트 가드닝 & 플랜테리어 마�
 slug: trend-season2-lighting-part1
 category: 식물 트렌드 & 스마트 가드닝
 is_pillar: false
-date: 2026-11-20
+date: 2026-12-21
 thumbnail: /images/uploads/trend-season2-lighting-part1.jpg
 ---
 
