@@ -61,3 +61,45 @@ collections:
       - label: "본문 내용"
         name: "body"
         widget: "markdown"
+
+              - label: "본문 내용"
+        name: "body"
+        widget: "markdown"
+
+# ▼ 아래 내용을 config.yml 맨 아래에 추가하세요 ▼
+editor_components:
+  - id: "custom-image"
+    label: "본문 이미지 (크기/캡션 자동 맞춤)"
+    fields:
+      - name: "image"
+        label: "이미지 선택"
+        widget: "image"
+      - name: "alt"
+        label: "대체 텍스트 (Alt)"
+        widget: "string"
+      - name: "caption"
+        label: "이미지 설명 (캡션)"
+        widget: "string"
+        required: false
+      - name: "width"
+        label: "가로 크기 (px)"
+        widget: "string"
+        default: "650"
+    pattern: '^<figure style="text-align: center; margin: 1.5rem 0;"><img src="(.*?)" alt="(.*?)" style="max-width: (.*?)px; width: 100%; height: auto; border-radius: 8px;"><figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5rem;">(.*?)</figcaption></figure>$'
+    fromBlock: |
+      function(match) {
+        return {
+          image: match[1],
+          alt: match[2],
+          width: match[3],
+          caption: match[4]
+        };
+      }
+    toBlock: |
+      function(obj) {
+        return '<figure style="text-align: center; margin: 1.5rem 0;"><img src="' + obj.image + '" alt="' + obj.alt + '" style="max-width: ' + obj.width + 'px; width: 100%; height: auto; border-radius: 8px;"><figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5rem;">' + obj.caption + '</figcaption></figure>';
+      }
+    toPreview: |
+      function(obj) {
+        return '<figure style="text-align: center;"><img src="' + obj.image + '" alt="' + obj.alt + '" style="max-width: ' + obj.width + 'px; width: 100%;"><figcaption>' + obj.caption + '</figcaption></figure>';
+      }
