@@ -457,20 +457,26 @@ a {
   color: var(--primary);
 }
 
-/* 본문(article-content) 내 이미지 및 캡션 자동 스타일링 */
-.article-content img {
-  max-width: 680px;       /* 본문 폭에 가장 보기 좋은 최대 너비 */
-  width: 100%;            /* 모바일/태블릿에서는 화면 폭에 맞춰 자동 축소 */
-  height: auto;           /* 원본 비율 유지 */
-  display: block;         /* 가운데 정렬을 위한 블록 처리 */
-  margin: 32px auto 12px; /* 위쪽 32px, 아래쪽 12px 여백 및 좌우 가운데 정렬 */
-  border-radius: 6px;     /* 매거진 카드와 동일한 6px 둥근 모서리 */
-  border: 1px solid var(--border-color); /* 은은한 테두리 */
-  box-shadow: 0 4px 12px rgba(45, 90, 39, 0.06); /* 플로럴데이즈 톤의 자연스러운 그림자 */
+/* 본문(article-detail, article-content, post-body 등) 내 모든 이미지 자동 맞춤 */
+.article-detail img,
+.article-content img,
+.post-content img,
+.post-body img,
+main article img {
+  max-width: 680px !important; /* 다른 스타일에 밀리지 않도록 우선순위 최상위 적용 */
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 32px auto 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(45, 90, 39, 0.06);
 }
 
-/* 이미지 바로 아래 줄에 기울임꼴(*캡션*)로 작성한 설명글 스타일 */
+/* 이미지 바로 아래 줄에 작성한 캡션(*캡션*) 정자체 스타일링 */
+.article-detail img + em,
 .article-content img + em,
+.article-detail p:has(> img) + p > em:only-child,
 .article-content p:has(> img) + p > em:only-child {
   display: block;
   text-align: center;
