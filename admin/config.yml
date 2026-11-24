@@ -62,11 +62,6 @@ collections:
         name: "body"
         widget: "markdown"
 
-              - label: "본문 내용"
-        name: "body"
-        widget: "markdown"
-
-# ▼ 아래 내용을 config.yml 맨 아래에 추가하세요 ▼
 editor_components:
   - id: "custom-image"
     label: "본문 이미지 (크기/캡션 자동 맞춤)"
