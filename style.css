@@ -669,3 +669,31 @@ a {
     text-align: center;
   }
 }
+
+/* 전체 카테고리 페이지 이미지-텍스트 겹침 방지 보완 */
+.category-header,
+.pillar-card,
+.series-roadmap-box,
+.card-grid,
+.info-card {
+  overflow: hidden;
+}
+
+.pillar-card img,
+.series-roadmap-box img,
+.category-header img {
+  position: static !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+  display: block;
+}
+
+.card-image img {
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+}
