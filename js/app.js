@@ -7,7 +7,8 @@ const CATEGORY_MAP = {
   "수목진료 및 병해충 실무 SOP": "sop",
   "식물 트렌드 & 스마트 가드닝": "trend",
   "홈가드닝 & 반려식물 클리닉": "homecare",
-  "도시숲, 생태 및 나무 인문학": "ecostory"
+  "도시숲, 생태 및 나무 인문학": "ecostory",
+  "식물 창업·전업 & 매장 리뉴얼": "biz"
 };
 
 // 키값으로 한글 카테고리명을 찾는 역매핑
@@ -16,7 +17,8 @@ const REVERSE_CATEGORY_MAP = {
   "sop": "수목진료 및 병해충 실무 SOP",
   "trend": "식물 트렌드 & 스마트 가드닝",
   "homecare": "홈가드닝 & 반려식물 클리닉",
-  "ecostory": "도시숲, 생태 및 나무 인문학"
+  "ecostory": "도시숲, 생태 및 나무 인문학",
+  "biz": "식물 창업·전업 & 매장 리뉴얼"
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (!grid) return;
 
-  const currentCategoryKey = grid.dataset.category; // 예: "study", "sop", "all" 등
+  const currentCategoryKey = grid.dataset.category; // 예: "study", "sop", "biz", "all" 등
   const targetKoreanCategory = REVERSE_CATEGORY_MAP[currentCategoryKey] || null;
 
   try {
