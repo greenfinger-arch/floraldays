@@ -12,7 +12,8 @@ const CATEGORY_MAP = {
   '수목진료 및 병해충 실무 SOP': 'sop',
   '식물 트렌드 & 스마트 가드닝': 'trend',
   '홈가드닝 & 반려식물 클리닉': 'homecare',
-  '도시숲, 생태 및 나무 인문학': 'ecostory'
+  '도시숲, 생태 및 나무 인문학': 'ecostory',
+  '식물 창업·전업 & 매장 리뉴얼': 'biz'
 };
 
 const CATEGORY_PAGES = [
@@ -20,7 +21,8 @@ const CATEGORY_PAGES = [
   'sop.html',
   'trend.html',
   'homecare.html',
-  'ecostory.html'
+  'ecostory.html',
+  'biz.html'
 ];
 
 marked.setOptions({ gfm: true, breaks: true });
