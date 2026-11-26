@@ -181,6 +181,7 @@
           <li><a href="/trend.html">식물 트렌드</a></li>
           <li><a href="/homecare.html">홈가드닝 클리닉</a></li>
           <li><a href="/ecostory.html">도시숲·생태</a></li>
+          <li><a href="/biz.html">식물 창업·리뉴얼</a></li>
         </ul>
       </nav>
     </div>
@@ -203,13 +204,14 @@
     const GITHUB_REPO = "greenfinger-arch/floraldays";
     const GITHUB_BRANCH = "main";
 
-    // 📌 플로럴데이즈 5대 카테고리 URL 매핑
+    // 📌 플로럴데이즈 6대 카테고리 URL 매핑
     const CATEGORY_URL_MAP = {
       "나무의사·국가자격증 스터디": "https://floraldays.com/study.html",
       "수목진료 및 병해충 실무 SOP": "https://floraldays.com/sop.html",
       "식물 트렌드 & 스마트 가드닝": "https://floraldays.com/trend.html",
       "홈가드닝 & 반려식물 클리닉": "https://floraldays.com/homecare.html",
-      "도시숲, 생태 및 나무 인문학": "https://floraldays.com/ecostory.html"
+      "도시숲, 생태 및 나무 인문학": "https://floraldays.com/ecostory.html",
+      "식물 창업·전업 & 매장 리뉴얼": "https://floraldays.com/biz.html"
     };
 
     marked.setOptions({ gfm: true, breaks: true });
@@ -221,7 +223,7 @@
       if (pathSegments.length > 0) {
         const firstSegment = pathSegments[0];
         
-        const categoryList = ['study', 'study.html', 'sop', 'sop.html', 'trend', 'trend.html', 'homecare', 'homecare.html', 'ecostory', 'ecostory.html', 'index.html', 'article.html', '404.html'];
+        const categoryList = ['study', 'study.html', 'sop', 'sop.html', 'trend', 'trend.html', 'homecare', 'homecare.html', 'ecostory', 'ecostory.html', 'biz', 'biz.html', 'index.html', 'article.html', '404.html'];
         if (categoryList.includes(firstSegment) || firstSegment.endsWith('.html')) {
           return ""; 
         }
